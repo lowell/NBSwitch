@@ -6,7 +6,7 @@
 //  Copyright (c) 2012 Nicolas Bouilleaud. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 /*
  *  This is an experimental switch/case construct for objective-C objects.
@@ -68,5 +68,5 @@
  * Return the switch object, which implements the actual case::case:: methods
  */
 @interface NSObject (NBSwitch)
-- (NBSwitch *) switch;
+- (NBSwitch *)switch;
 @end

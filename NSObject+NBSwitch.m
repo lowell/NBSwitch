@@ -6,14 +6,14 @@
 //  Copyright (c) 2012 Nicolas Bouilleaud. All rights reserved.
 //
 
-#import "NSObject+NBSwitch.h"
+#import <NBSwitch/NSObject+NBSwitch.h>
 #import <objc/runtime.h>
 
 // Implementation function declaration
-static void objcswitch(NBSwitch * self, SEL _cmd, ...);
+static void nb_switch(NBSwitch * self, SEL _cmd, ...);
 
 // Selector name templates
-#define CASE__ "case::"
+#define CASE__   "case::"
 #define DEFAULT_ "default:"
 
 // Of course, NBSwitch does not define implementation for all
@@ -72,7 +72,7 @@ static void objcswitch(NBSwitch * self, SEL _cmd, ...);
     if(hasDefaultBlock)
         [types appendFormat:@"%s",@encode(void(^)(void))];
 
-    class_addMethod(self, aSEL, (IMP) objcswitch, [types cStringUsingEncoding:NSASCIIStringEncoding]);
+    class_addMethod(self, aSEL, (IMP) nb_switch, [types cStringUsingEncoding:NSASCIIStringEncoding]);
     return YES;
 }
 
@@ -85,7 +85,7 @@ static void objcswitch(NBSwitch * self, SEL _cmd, ...);
 // Although there's no variadic in the public interface, we use one for the implementation.
 // We use the length of the selector to count the number of cases
 // and find if there's a "default" block.
-static void objcswitch(NBSwitch * self, SEL _cmd, ...)
+static void nb_switch(NBSwitch * self, SEL _cmd, ...)
 {
 	va_list args;
 	va_start(args, _cmd);
