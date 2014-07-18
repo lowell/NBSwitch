@@ -9,8 +9,8 @@
 @import Foundation;
 
 /*
- *  This is an experimental switch/case construct for objective-C objects.
- *  Use it like that :
+ *  This is an experimental switch/case construct for Objective-C objects.
+ *  Use it like this:
  *
  *  [[@"foo" switch]
  *   case:@"bar" :^{ success = NO; }
