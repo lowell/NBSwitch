@@ -178,7 +178,7 @@
 			name = ARM_tests;
 			productName = ios_tests;
 			productReference = 372744CF15341D8B008AEF72 /* ARM_tests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productType = "com.apple.product-type.bundle.ocunit-test";
 		};
 		37A0730314C487BB0094CD27 /* x86_tests */ = {
 			isa = PBXNativeTarget;
@@ -196,7 +196,7 @@
 			name = x86_tests;
 			productName = "objcswitch-tests";
 			productReference = 37A0730414C487BB0094CD27 /* x86_tests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productType = "com.apple.product-type.bundle.ocunit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -207,7 +207,7 @@
 				LastUpgradeCheck = 0420;
 				ORGANIZATIONNAME = Visuamobile;
 			};
-			buildConfigurationList = 37A072E514C487570094CD27 /* Build configuration list for PBXProject "objcswitch" */;
+			buildConfigurationList = 37A072E514C487570094CD27 /* Build configuration list for PBXProject "NBSwitch" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -472,7 +472,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		37A072E514C487570094CD27 /* Build configuration list for PBXProject "objcswitch" */ = {
+		37A072E514C487570094CD27 /* Build configuration list for PBXProject "NBSwitch" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				37A072F814C487580094CD27 /* Debug */,

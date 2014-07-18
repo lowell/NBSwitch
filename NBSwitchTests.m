@@ -8,14 +8,14 @@
 
 #import <SenTestingKit/SenTestingKit.h>
 #import <objc/runtime.h>
-#import "NSObject+objcswitch.h"
+#import "NSObject+NBSwitch.h"
 
 
-@interface objcswitch_tests : SenTestCase
+@interface NBSwitchTests : SenTestCase
 
 @end
 
-@implementation objcswitch_tests
+@implementation NBSwitchTests
 
 - (void)test_respondsToSelectorBasic
 {

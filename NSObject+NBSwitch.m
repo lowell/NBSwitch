@@ -6,25 +6,25 @@
 //  Copyright (c) 2012 Nicolas Bouilleaud. All rights reserved.
 //
 
-#import "NSObject+objcswitch.h"
+#import "NSObject+NBSwitch.h"
 #import <objc/runtime.h>
 
 // Implementation function declaration
-static void objcswitch(ObjcSwitch * self, SEL _cmd, ...);
+static void objcswitch(NBSwitch * self, SEL _cmd, ...);
 
 // Selector name templates
 #define CASE__ "case::"
 #define DEFAULT_ "default:"
 
-// Of course, ObjcSwitch does not define implementation for all
+// Of course, NBSwitch does not define implementation for all
 // the selectors declared in the .h.
 // Shut up that warning.
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wincomplete-implementation"
 
-@implementation ObjcSwitch
+@implementation NBSwitch
 {
-    // The ObjcSwitch object acts as a trampoline for the object it was created with.
+    // The NBSwitch object acts as a trampoline for the object it was created with.
     // Make the receiver ivar public so that everyone in the implementation can use it.
     @public
     id receiver;
@@ -85,7 +85,7 @@ static void objcswitch(ObjcSwitch * self, SEL _cmd, ...);
 // Although there's no variadic in the public interface, we use one for the implementation.
 // We use the length of the selector to count the number of cases
 // and find if there's a "default" block.
-static void objcswitch(ObjcSwitch * self, SEL _cmd, ...)
+static void objcswitch(NBSwitch * self, SEL _cmd, ...)
 {
 	va_list args;
 	va_start(args, _cmd);
@@ -121,15 +121,15 @@ cleanup:
 	va_end(args); 
 }
 
-// Our NSObject category to create the ObjcSwitch, simply used as a trampoline object.
+// Our NSObject category to create the NBSwitch, simply used as a trampoline object.
 // 
 // We could also define the case:: methods on NSObject itself, but that would require
 // implementing - (BOOL) resolveInstanceMethod: in an NSObject category, which
 // would be quite dangerous.
-@implementation NSObject (objcswitch)
-- (ObjcSwitch *) switch
+@implementation NSObject (NBSwitch)
+- (NBSwitch *) switch
 {
-    ObjcSwitch * sw_ = [ObjcSwitch new];
+    NBSwitch * sw_ = [NBSwitch new];
     sw_->receiver = self;
     return sw_;
 }

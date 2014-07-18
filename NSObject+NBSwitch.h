@@ -19,7 +19,7 @@
  *  ];
  */
 
-@interface ObjcSwitch : NSObject
+@interface NBSwitch : NSObject
 
 /*
  * The case::case:: methods are declared here, through recursive #includes
@@ -53,20 +53,20 @@
  * declare "case::case::default:" methods
  */
 #define OBJCSWITCH_DEFAULT_BLOCK TRUE
-#include "objcswitch_switch.def.h"
+#include "nb_switch.def.h"
 
 /*
  * declare "case::case::" method
  */
 #undef OBJCSWITCH_DEFAULT_BLOCK
 #define OBJCSWITCH_DEFAULT_BLOCK FALSE
-#include "objcswitch_switch.def.h"
+#include "nb_switch.def.h"
 
 @end
 
 /*
  * Return the switch object, which implements the actual case::case:: methods
  */
-@interface NSObject (objcswitch)
-- (ObjcSwitch *) switch;
+@interface NSObject (NBSwitch)
+- (NBSwitch *) switch;
 @end

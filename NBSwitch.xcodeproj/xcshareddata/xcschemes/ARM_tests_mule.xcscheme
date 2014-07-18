@@ -16,7 +16,7 @@
                BlueprintIdentifier = "372744A91534197E008AEF72"
                BuildableName = "ARM_tests_mule.app"
                BlueprintName = "ARM_tests_mule"
-               ReferencedContainer = "container:objcswitch.xcodeproj">
+               ReferencedContainer = "container:NBSwitch.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -34,7 +34,7 @@
                BlueprintIdentifier = "372744CE15341D8B008AEF72"
                BuildableName = "ARM_tests.octest"
                BlueprintName = "ARM_tests"
-               ReferencedContainer = "container:objcswitch.xcodeproj">
+               ReferencedContainer = "container:NBSwitch.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -44,7 +44,7 @@
             BlueprintIdentifier = "372744A91534197E008AEF72"
             BuildableName = "ARM_tests_mule.app"
             BlueprintName = "ARM_tests_mule"
-            ReferencedContainer = "container:objcswitch.xcodeproj">
+            ReferencedContainer = "container:NBSwitch.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -63,7 +63,7 @@
             BlueprintIdentifier = "372744A91534197E008AEF72"
             BuildableName = "ARM_tests_mule.app"
             BlueprintName = "ARM_tests_mule"
-            ReferencedContainer = "container:objcswitch.xcodeproj">
+            ReferencedContainer = "container:NBSwitch.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -81,7 +81,7 @@
             BlueprintIdentifier = "372744A91534197E008AEF72"
             BuildableName = "ARM_tests_mule.app"
             BlueprintName = "ARM_tests_mule"
-            ReferencedContainer = "container:objcswitch.xcodeproj">
+            ReferencedContainer = "container:NBSwitch.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

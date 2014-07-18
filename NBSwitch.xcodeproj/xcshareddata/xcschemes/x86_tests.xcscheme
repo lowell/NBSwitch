@@ -18,7 +18,7 @@
                BlueprintIdentifier = "37A0730314C487BB0094CD27"
                BuildableName = "x86_tests.octest"
                BlueprintName = "x86_tests"
-               ReferencedContainer = "container:objcswitch.xcodeproj">
+               ReferencedContainer = "container:NBSwitch.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>

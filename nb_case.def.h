@@ -10,6 +10,6 @@
 #if __INCLUDE_LEVEL__ < OBJCSWITCH_MAX_CASE_COUNT
 
 case:(id)v :(void (^)(void))b			// single case line
-#include "objcswitch_case.def.h"		// include myself for next line
+#include "nb_case.def.h"		// include myself for next line
 
 #endif
